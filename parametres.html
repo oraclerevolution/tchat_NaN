@@ -1,0 +1,63 @@
+<?php
+session_start();
+require ('./../script/functions.php');
+$bdd = bdd_connect();
+delete_msg();
+if ($_SESSION['pseudo'] == NULL) {
+    header('Location: ./../index.php');
+    }
+      else {}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+  <head>
+    <link rel="stylesheet" href="./style_gest.css" />
+    <title>Gestion : <?php echo $_SESSION['pseudo']; ?></title>
+    <meta charset="utf-8" />
+    <meta language="FR" />
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script src="script/bootstrap.min.js"></script>
+    <style>
+        button{
+            width: 250px;
+            margin: 10px;
+        }
+        body{
+            background: url('image/fond.PNG');
+        }
+        h1{
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .param{
+            margin: 0 auto;
+            background: white;
+            padding: 25px;
+            border-radius: 5px;
+        }
+    </style>
+   </head>
+  <body>
+      <h1>Paramètres du tchat</h1>
+      <div class="col-lg-10 param">
+        <center>
+             <a href="change.php?action=1"><button class="btn btn-primary">Changer de mot de passe</button></a><br>
+             <a href="change.php?action=4"><button class="btn btn-primary">Changer de pseudo</button></a><br>
+             <a href="change.php?action=2"><button class="btn btn-danger">Effacer mes messages</button></a><br>
+             <a href="change.php?action=3"><button class="btn btn-danger">Supprimer mon compte</button></a><br>
+            <a href="./script/deconnexion.php"><button class="btn btn-warning">Deconnectez-vous</button></a><br>
+            <div id="change_status">
+                <form action="#" method="post">
+                <table><tr><td><select name="status" id="status">
+                <option value="#" selected>Status</option>
+                <option value="0">En ligne</option>
+                <option value="1">Occupé</option>
+                <option value="2">Absent</option>
+                </select></td></tr>
+                <tr><td><input type="button" value="appliquer" class="btn btn-info form-control" onClick="set_status()" /></td></tr></table>
+                </form>
+            </div>
+            </center>
+      </div>
+    

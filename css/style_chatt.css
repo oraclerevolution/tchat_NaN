@@ -1,0 +1,63 @@
+body{
+    background: url('../image/fond.png');
+}
+.hidden {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.elem{
+    display: inline-block;   
+}
+.listes{
+    right: 0;
+    position: absolute
+}
+.connectes{
+    border-right: 3px solid black;
+    background: white;
+    margin-top: 5px;
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+}
+.connectes h2{
+    text-align: center;
+    color: black;
+}
+.connectes h2:hover{
+    text-decoration: underline;
+}
+#cadre{
+    margin-top: 5px;
+    background: white;
+    min-height: 100%;
+    position: absolute;
+    right: 0;
+    top: 69px;
+}
+.champ{
+    position: absolute;
+    bottom: 10px;
+    text-decoration: overline;
+    float: left;
+    width: 96% !important;
+}
+.btn-perso{
+    background-color: #7369F1;
+    color: white;
+    margin-top: 8px;
+}
+#cadre_chat{
+    margin-top: 5px;
+    min-height: 80%;
+    position: absolute;
+    color: black;
+    overflow-y: scroll;
+    word-wrap: break-word;
+}
+#change_status{
+    position: relative;
+    left: 35%;
+}

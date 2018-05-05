@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8" />
+      <title>Inscrivez-vous sur le chat de NaN</title>
+      <link rel="shortcut icon" href="image/logo_NaN.png" type="image/x-icon">
+      <link rel="stylesheet" type="text/css" href="./css/style_inscription.css" />
+      <link rel="stylesheet" href="css/bootstrap.min.css"/>
+      <link href="https://fonts.googleapis.com/css?family=Bitter|PT+Sans" rel="stylesheet">
+      <script src="script/bootstrap.min.js"></script>
+      <style>
+        body{
+          background-image: url('image/fond.PNG');
+        }
+        .inscription label{
+          color: white;
+        }
+        input{
+         background-color: black;
+         opacity: 0.7;
+         color: white;
+        }
+        .inscription{
+          border: 2px solid black;
+          text-align: center;
+        }
+        .inscription p{
+          font-family: 'PT Sans', sans-serif;
+          color: white;
+        }
+        .inscription h3{
+          font-family: 'Bitter', serif;
+          color: #F1F354;
+        }
+        .btn-inscription:hover{
+          background-color: #9198e5;
+        }
+      </style>
+   </head>
+   
+   <body>
+   <section class="contaier">
+      <div class="inscription">
+        <form action="./script/inscription.php" method="post">
+          <h3>Inscrivez-vous à NaN community</h3>
+        <p>Une fois inscris vous avez la possibilité d'écrire à tous les membres de la communauté NaN, des préoccupations, des problèmes, etc ... toutes les portes vous seront ouvertes pour bénéficier de l'aide de toute la communauté.</p>
+        <div class="form-group">
+            <label for="">Prénom :
+                <input type="text" name="prenom" class="form-control" required autofocus/>
+              </label>
+        </div>
+        <div class="form-group">
+            <label for="">Nom :
+                <input type="text" name="nom" class="form-control" required/>
+              </label>
+        </div>
+        <div class="form-group">
+            <label for="">Email :
+                <input type="email" name="email" class="form-control" required/>
+              </label>
+        </div>
+        <div class="form-group">
+            <label for="">Pseudo :
+                <input type="text" name="pseudo" class="form-control" required/>
+              </label>
+        </div>
+        <div class="form-group">
+            <label for="">Mot de passe :
+                <input type="password" name="password" class="form-control" id="pwd1" required/>
+              </label>
+        </div>
+        <div class="form-group">
+            <label for="">Mot de passe (confirmation) :
+                <input type="password" name="password_confirm" class="form-control" id="pwd2" required/>
+              </label>
+        </div>
+        <div class="form-group">
+          <label for="">Votre Statut :
+              <input type="text" name="stat" class="form-control" id="" maxlength="60" placeholder="Programmons toujours" required/>
+            </label>
+        </div>
+        <!--<a href="index.php">
+            <button type="button" class="btn btn-warning">Revenir</button>
+        </a>-->
+        <input type="submit" value="S'inscrire" class="btn btn-inscription btn-primary">
+        <p>Vous êtes déjà inscrit ? <a href="index.php">Connectez-vous directement ici</a></p>
+        </form>
+      </div>
+   </section>
